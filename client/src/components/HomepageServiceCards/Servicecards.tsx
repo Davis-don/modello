@@ -1,6 +1,6 @@
 // components/ServiceCards.tsx
 import React from 'react';
-import './ServiceCards.css';
+import './servicecards.css';
 
 type MathServiceCard = {
   icon: string;
