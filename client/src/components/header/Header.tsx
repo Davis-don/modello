@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './header.css';
 
-type NavLink = {
+type NavLinkType = {
   name: string;
   path: string;
 };
@@ -10,7 +11,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navLinks: NavLink[] = [
+  const navLinks: NavLinkType[] = [
     { name: 'Home', path: '/' },
     { name: 'Services', path: '/services' },
     { name: 'Case Studies', path: '/case-studies' },
@@ -45,15 +46,19 @@ function Header() {
             <ul className="nav-list">
               {navLinks.map((link) => (
                 <li key={link.path} className="nav-item">
-                  <a href={link.path} className="nav-link">
+                  <Link to={link.path} className="nav-link">
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </nav>
 
-          <button className="menu-toggle" onClick={toggleMenu} aria-label="Toggle navigation">
+          <button
+            className="menu-toggle"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation"
+          >
             <span className={`hamburger ${isMenuOpen ? 'open' : ''}`}></span>
           </button>
         </div>
