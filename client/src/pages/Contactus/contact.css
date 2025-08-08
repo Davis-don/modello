@@ -1,0 +1,19 @@
+/* Base styles that apply to all contact components */
+.contact-page {
+  font-family: 'Inter', sans-serif;
+  color: #14213d;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive base styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}

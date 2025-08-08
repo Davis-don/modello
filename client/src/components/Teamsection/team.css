@@ -1,0 +1,126 @@
+.team-section {
+  padding: 100px 0;
+  background-color: white;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #14213d;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(67, 97, 238, 0.1);
+}
+
+.member-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.member-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #4361ee, #4cc9f0);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.team-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  color: #14213d;
+}
+
+.member-title {
+  color: #4361ee;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.member-details {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.member-details p {
+  margin-bottom: 12px;
+}
+
+.fun-fact {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.fun-fact span {
+  font-weight: 600;
+  color: #4361ee;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 70px 0;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}

@@ -1,0 +1,31 @@
+/* styles/math-variables.css */
+:root {
+  /* Math-themed color palette */
+  --math-primary: #4361ee;
+  --math-secondary: #3a0ca3;
+  --math-accent: #4cc9f0;
+  --math-text-primary: #14213d;
+  --math-light: #f8f9fa;
+  --math-gray-light: #e9ecef;
+  
+  /* Equation styling */
+  --math-equation-bg: rgba(244, 244, 255, 0.8);
+  --math-symbol-color: #3a0ca3;
+  
+  /* Card gradients */
+  --math-card-gradient-start: rgba(67, 97, 238, 0.05);
+  --math-card-gradient-end: rgba(76, 201, 240, 0.05);
+}
+
+/* Shared math component styles */
+.math-common-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Animation for math elements */
+@keyframes math-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

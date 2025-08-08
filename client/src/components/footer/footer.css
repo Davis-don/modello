@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3a0ca3;
+  --text-color: #14213d;
+  --light-color: #f8f9fa;
+  --gray-medium: #adb5bd;
+}
+
+.footer {
+  background-color: var(--text-color);
+  color: white;
+  padding: 40px 0 0;
+  font-size: 1rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-right: 12px;
+}
+
+.footer-logo-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-tagline {
+  color: var(--gray-medium);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  max-width: 300px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.links-column {
+  min-width: 150px;
+}
+
+.links-heading {
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.links-list li a {
+  color: var(--gray-medium);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 1.5rem;
+}
+
+.links-list li a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.footer-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.copyright {
+  color: var(--gray-medium);
+  font-size: 1.3rem;
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .footer-links {
+    justify-content: flex-end;
+    gap: 50px;
+  }
+}

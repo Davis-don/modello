@@ -1,0 +1,28 @@
+.contact-map {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.contact-map h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #14213d;
+  margin-bottom: 40px;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-map {
+    padding: 60px 0;
+  }
+  
+  .contact-map h2 {
+    font-size: 1.8rem;
+  }
+}

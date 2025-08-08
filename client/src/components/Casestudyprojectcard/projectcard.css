@@ -1,0 +1,237 @@
+/* components/ProjectCard.css */
+.mpc-container {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  position: relative;
+  overflow: hidden;
+}
+
+.mpc-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h60v60H0z" fill="none"/><path d="M0 30h60M30 0v60" stroke="rgba(67, 97, 238, 0.05)" stroke-width="0.8"/></svg>');
+}
+
+.mpc-header {
+  text-align: center;
+  margin-bottom: 70px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mpc-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--math-text-primary);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.mpc-highlight {
+  background: linear-gradient(135deg, var(--math-primary), var(--math-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.mpc-subtitle {
+  font-size: 1.8rem;
+  color: var(--math-text-primary);
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+.mpc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.mpc-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.mpc-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(67, 97, 238, 0.15);
+}
+
+.mpc-card-header {
+  padding: 30px 30px 20px;
+}
+
+.mpc-category {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(76, 201, 240, 0.1));
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--math-primary);
+  margin-bottom: 15px;
+}
+
+.mpc-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--math-text-primary);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.mpc-image-container {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.mpc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mpc-equation-overlay {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mpc-equation {
+  font-family: 'Courier New', monospace;
+  font-size: 1.3rem;
+  color: var(--math-primary);
+  font-weight: 600;
+}
+
+.mpc-description {
+  padding: 0 30px;
+  font-size: 1.3rem;
+  color: var(--math-text-primary);
+  opacity: 0.9;
+  line-height: 1.7;
+  margin: 25px 0;
+}
+
+.mpc-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 0 30px 30px;
+}
+
+.mpc-stat {
+  text-align: center;
+  padding: 15px;
+  background: rgba(67, 97, 238, 0.05);
+  border-radius: 10px;
+}
+
+.mpc-stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--math-primary);
+  margin-bottom: 5px;
+}
+
+.mpc-stat-label {
+  font-size: 1.1rem;
+  color: var(--math-text-primary);
+  opacity: 0.8;
+}
+
+.mpc-decoration {
+  padding: 0 30px 30px;
+}
+
+.mpc-decoration-line {
+  height: 4px;
+  background: linear-gradient(90deg, var(--math-primary), var(--math-accent));
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .mpc-main-title {
+    font-size: 3rem;
+  }
+  
+  .mpc-subtitle {
+    font-size: 1.6rem;
+  }
+  
+  .mpc-title {
+    font-size: 1.8rem;
+  }
+  
+  .mpc-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mpc-container {
+    padding: 80px 0;
+  }
+  
+  .mpc-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .mpc-subtitle {
+    font-size: 1.4rem;
+  }
+  
+  .mpc-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    padding: 0 20px;
+  }
+  
+  .mpc-image-container {
+    height: 200px;
+  }
+  
+  .mpc-stat-value {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .mpc-main-title {
+    font-size: 2.2rem;
+  }
+  
+  .mpc-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .mpc-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .mpc-stat {
+    padding: 12px;
+  }
+}

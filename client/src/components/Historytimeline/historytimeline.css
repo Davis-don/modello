@@ -1,0 +1,153 @@
+.history-timeline {
+  padding: 100px 0;
+  background-color: #f9fafc;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 70px;
+  color: #14213d;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #4361ee, #3a0ca3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 100px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 100px;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to bottom, #4361ee, #4cc9f0);
+}
+
+.timeline-event {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 60px;
+}
+
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: 96px;
+  top: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4361ee;
+  z-index: 1;
+}
+
+.timeline-event.milestone::before {
+  width: 16px;
+  height: 16px;
+  left: 94px;
+  top: 8px;
+  background: #3a0ca3;
+  border: 3px solid #4cc9f0;
+}
+
+.event-year {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  font-weight: 700;
+  color: #4361ee;
+  font-size: 1.1rem;
+}
+
+.event-content {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.event-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #14213d;
+}
+
+.event-content p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.timeline-event.milestone .event-content {
+  border-left: 4px solid #3a0ca3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .history-timeline {
+    padding: 70px 0;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+  
+  .timeline {
+    padding-left: 70px;
+  }
+  
+  .timeline::before {
+    left: 70px;
+  }
+  
+  .timeline-event::before {
+    left: 66px;
+  }
+  
+  .timeline-event.milestone::before {
+    left: 64px;
+  }
+  
+  .event-year {
+    width: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline {
+    padding-left: 50px;
+  }
+  
+  .timeline::before {
+    left: 50px;
+  }
+  
+  .timeline-event {
+    padding-left: 40px;
+  }
+  
+  .timeline-event::before {
+    left: 46px;
+  }
+  
+  .timeline-event.milestone::before {
+    left: 44px;
+  }
+  
+  .event-year {
+    width: 40px;
+    font-size: 0.9rem;
+  }
+}
