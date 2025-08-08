@@ -31,6 +31,11 @@ function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close menu when a link is clicked (mainly for mobile)
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -46,7 +51,11 @@ function Header() {
             <ul className="nav-list">
               {navLinks.map((link) => (
                 <li key={link.path} className="nav-item">
-                  <Link to={link.path} className="nav-link">
+                  <Link
+                    to={link.path}
+                    className="nav-link"
+                    onClick={handleLinkClick}
+                  >
                     {link.name}
                   </Link>
                 </li>
