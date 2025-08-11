@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './header.css';
+import logoImg from '../../assets/Logo of Progress and Growth.png'
 
 type NavLinkType = {
   name: string;
@@ -42,8 +43,10 @@ function Header() {
         <div className="header-container">
           <div className="logo-container">
             <div className="logo">
-              <span className="logo-icon">∫</span>
-              <span className="logo-text">Quantiform Labs</span>
+              <img src={logoImg} alt="image of logo" />
+            </div>
+            <div className="company-name-logo">
+              Forescena
             </div>
           </div>
 

@@ -1,60 +1,51 @@
 import React from 'react';
-import './historytimeline.css'
+import './historytimeline.css';
 
-type TimelineEvent = {
-  year: string;
+type StoryEvent = {
   title: string;
   description: string;
-  milestone: boolean;
+  icon: string;
 };
 
-const HistoryTimeline: React.FC = () => {
-  const events: TimelineEvent[] = [
+const FounderTimeline: React.FC = () => {
+  const story: StoryEvent[] = [
     {
-      year: "2015",
-      title: "Founded",
-      description: "Established with 3 mathematicians in Cambridge, MA",
-      milestone: true
+      title: "The Vision",
+      description: "Davis Mugo, a computer science and mathematics expert, identified how mathematical models could transform business decision-making",
+      icon: "🔍"
     },
     {
-      year: "2017",
-      title: "First Major Client",
-      description: "Developed predictive models for Fortune 500 financial firm",
-      milestone: false
+      title: "The Passion",
+      description: "Combining his expertise in algorithms and predictive modeling, Davis began developing innovative solutions to complex business problems",
+      icon: "❤️"
     },
     {
-      year: "2019",
-      title: "Research Breakthrough",
-      description: "Published novel optimization algorithm in SIAM Journal",
-      milestone: true
+      title: "The Breakthrough",
+      description: "Created proprietary optimization techniques that outperformed traditional business forecasting methods",
+      icon: "💡"
     },
     {
-      year: "2021",
-      title: "Expansion",
-      description: "Opened European office with team of 10 specialists",
-      milestone: false
+      title: "The Application",
+      description: "Successfully applied these models across industries from finance to logistics, proving their universal value",
+      icon: "🚀"
     },
     {
-      year: "2023",
-      title: "Current",
-      description: "Serving clients across 12 industries with 50+ team members",
-      milestone: true
+      title: "The Future",
+      description: "Continuing to push boundaries in mathematical business optimization, with a growing team of like-minded experts",
+      icon: "🌐"
     }
   ];
 
   return (
-    <section className="history-timeline">
+    <section className="founder-timeline">
       <div className="container">
         <h2 className="section-title">
-          Our <span className="highlight">Journey</span>
+          The <span className="highlight">Founder's Story</span>
         </h2>
-        <div className="timeline">
-          {events.map((event, index) => (
-            <div 
-              className={`timeline-event ${event.milestone ? 'milestone' : ''}`} 
-              key={index}
-            >
-              <div className="event-year">{event.year}</div>
+        <div className="storyline">
+          {story.map((event, index) => (
+            <div className="story-event" key={index}>
+              <div className="event-icon">{event.icon}</div>
               <div className="event-content">
                 <h3>{event.title}</h3>
                 <p>{event.description}</p>
@@ -62,9 +53,15 @@ const HistoryTimeline: React.FC = () => {
             </div>
           ))}
         </div>
+        <div className="founder-quote">
+          <blockquote>
+            "Mathematics is the language of business optimization. When you can model it, you can master it."
+            <footer>- Davis Mugo, Founder</footer>
+          </blockquote>
+        </div>
       </div>
     </section>
   );
 };
 
-export default HistoryTimeline;
+export default FounderTimeline;

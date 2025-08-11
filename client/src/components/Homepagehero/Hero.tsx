@@ -1,7 +1,10 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './hero.css';
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="hero">
       <div className="hero-container">
@@ -15,12 +18,15 @@ const Hero: React.FC = () => {
             Precision mathematical modeling that unlocks insights and drives innovation
           </p>
           <div className="hero-cta">
-            <a href="/contact" className="cta-button primary">
+            <Link to="/contact" className="cta-button primary">
               Start Your Project
-            </a>
-            <a href="/services" className="cta-button secondary">
+            </Link>
+            <button 
+              onClick={() => navigate('/services')} 
+              className="cta-button secondary"
+            >
               Explore Methods
-            </a>
+            </button>
           </div>
         </div>
         <div className="hero-visual">

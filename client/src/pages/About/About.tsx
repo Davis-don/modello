@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MissionStatement from '../../components/Mission/Mission';
-import TeamSection from '../../components/Teamsection/Teamsection';
-import HistoryTimeline from '../../components/Historytimeline/Historytimeline';
-import './about.css'
+// import TeamSection from '../../components/Teamsection/Teamsection';
+import FounderTimeline from '../../components/Historytimeline/Historytimeline';
+import './about.css';
 
 const AboutPage: React.FC = () => {
   return (
@@ -18,13 +19,13 @@ const AboutPage: React.FC = () => {
       </section>
       
       <MissionStatement />
-      <TeamSection />
-      <HistoryTimeline />
+      {/* <TeamSection /> */}
+      <FounderTimeline/>
       
       <section className="cta-section">
         <div className="container">
           <h2>Ready to transform your data into decisions?</h2>
-          <a href="/contact" className="cta-button">Get in Touch</a>
+          <Link to="/contact" className="cta-button">Get in Touch</Link>
         </div>
       </section>
     </main>

@@ -15,7 +15,7 @@ const ContactHero: React.FC = () => {
             <div className="method-icon">✉️</div>
             <div>
               <h3>Email Us</h3>
-              <a href="mailto:solutions@mathmod.com">solutions@mathmod.com</a>
+              <a href="mailto:solutions@mathmod.com">davismugoikou@gmail.com</a>
             </div>
           </div>
         </div>

@@ -2,29 +2,38 @@ import React from 'react';
 import './contactinfo.css';
 
 const ContactInfo: React.FC = () => {
+  const whatsappNumber = '254758420860'; // Kenyan number format for WhatsApp
+  const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
   return (
     <section className="contact-info">
       <div className="container">
         <div className="info-grid">
           <div className="info-card">
             <div className="info-icon">📍</div>
-            <h3>Our Headquarters</h3>
-            <p>250 Math Park Drive</p>
-            <p>Cambridge, MA 02142</p>
+            <h3>Our Location</h3>
+            <p>Nairobi, Kenya</p>
           </div>
           
           <div className="info-card">
             <div className="info-icon">📞</div>
             <h3>Phone</h3>
-            <p>+1 (617) 555-0199</p>
-            <p>Mon-Fri, 9am-5pm EST</p>
+            <p>+254 758 420860</p>
+            <p>Mon-Fri, 9am-5pm EAT</p>
           </div>
           
           <div className="info-card">
             <div className="info-icon">💬</div>
-            <h3>Live Chat</h3>
+            <h3>WhatsApp</h3>
             <p>Available 24/7</p>
-            <a href="/chat" className="chat-link">Start Chat Now</a>
+            <a 
+              href={whatsappLink} 
+              className="chat-link"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
